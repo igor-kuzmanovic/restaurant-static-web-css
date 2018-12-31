@@ -16,9 +16,8 @@ html, body {
     background-image: url("../images/promo_background.jpg");
     background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;     
-    height: 750px;
-    padding: 220px 0;
+    background-size: auto;    
+    padding: 220px 0 145px 0;
     text-align: center;
 }
 
