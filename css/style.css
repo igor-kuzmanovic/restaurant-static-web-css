@@ -211,6 +211,7 @@ a, a:hover, a:visited, a:active {
 #promo .buttons a.button-black {
   background: rgba(0, 0, 0, 0.7);  
   border: 1px solid rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
 
 #promo .buttons a.button-black:hover {
@@ -604,12 +605,17 @@ a, a:hover, a:visited, a:active {
   padding: 1.5vh 4vw;
   
   background-color: #c99f00;
-  border: none;
+  border: 1px solid #c99f00;
   font-family: "Lato";
   font-size: 2.5vh;
   font-weight: 400;
   color: white;
   text-align: left;
+}
+
+#reservations a:hover {
+  background-color: white;
+  color: #c99f00;
 }
 
 /* Footer */

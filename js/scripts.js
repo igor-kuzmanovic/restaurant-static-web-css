@@ -34,3 +34,12 @@ function updateSlide(n) {
   else if (slideIndex < 1) { slideIndex = 3 }
   promo.className = promo.className.replace("bg-img-X", "bg-img-" + slideIndex);
 }
+
+/* Book a table button - focus the first input field */
+
+var bookTableBtn = document.getElementsByClassName("button-black")[0];
+var reservationsForm = document.getElementsByTagName("form")[0];
+var firstInput = reservationsForm.getElementsByTagName("input")[0];
+bookTableBtn.addEventListener("click", function() {
+  firstInput.focus();
+});
