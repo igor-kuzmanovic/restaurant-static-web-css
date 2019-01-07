@@ -1,0 +1,13 @@
+{
+  "name": "restaurant-web",
+  "version": "1.0.0",
+  "description": "Pure HTMl/CSS/JS static website",
+  "main": "index.html",
+  "repository": {
+    "type": "git"
+  },
+  "author": "Igor Kuzmanovic",
+  "devDependencies": {
+    "grunt": "^1.0.3"
+  }
+}
