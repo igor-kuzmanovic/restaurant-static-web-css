@@ -1,16 +1,25 @@
 // Footer Section
 
 #footer {
-  min-height: 320px;
-  
   .bg-image {
     position: absolute;
-    background: bg_image('footer');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    top: 0;
+    bottom: 0;
+    background: $gray-darkest;
     width: 100%;
-    min-height: 320px;
-    z-index: -1;
+  }
+
+  .content-wrapper {
+    padding-bottom: 2em;
+  }
+
+  h3 {
+    padding-top: 3em;
+  }
+
+  a {
+    &:hover {
+      color: $gold
+    }
   }
 }

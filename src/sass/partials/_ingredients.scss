@@ -1,16 +1,28 @@
 // Ingredients Section
 
 #ingredients {
-  min-height: 758px;
-  
   .bg-image {
     position: absolute;
+    top: 0;
+    bottom: 0;    
     background: bg_image('ingredients');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
-    min-height: 758px;
-    z-index: -1;
+  }
+  
+  .content-wrapper {
+    padding: 2em 0;
+    background: rgba($black, .3);
+    box-shadow: inset 0 0 5em 3em rgba($black, .5);
+  }
+  
+  .ingredient {
+    margin-top: 2em;
+    display: inline-block;
+    border-radius: 50%;
+    border: 5px solid rgba($gray, .3);
   }
 }

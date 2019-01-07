@@ -1,17 +1,55 @@
 // Promo Section
 
 #promo {
-  min-height: 750px;
+  min-height: 90vh;
 
   .bg-image {
     position: absolute;
+    top: 0;
+    bottom: 0;
     background: bg_image('promo');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
-    min-height: 750px;
-    z-index: -1;
+  }
+
+  .content-wrapper {
+    padding-top: 2em;
+  }
+
+  h1 {
+    text-shadow: 1px 1px 2px rgba($black, .7);
+  }
+
+  .btn {
+    display: block;
+    width: 80%;
+    margin: 1em auto;
+    padding: .9em 2.6em;
+    font: $font-size-btn $lato;
+    text-transform: uppercase;
+
+    &.btn-black {
+      border: 1px solid rgba($black, .8);
+      background: rgba($black, .5);
+
+      &:hover {
+        border-color: $black;
+        background: rgba($black, .8);
+      }
+    }
+
+    &.btn-white {
+      border: 1px solid rgba($white, .8);
+      background: rgba($white, .5);
+
+      &:hover {
+        border-color: $white;
+        background: rgba($white, .2);
+      }
+    }
   }
 
   .slider-prev,

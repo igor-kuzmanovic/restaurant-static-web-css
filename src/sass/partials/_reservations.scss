@@ -1,16 +1,79 @@
 // Reservations Section
 
 #reservations {
-  min-height: 710px;
-
   .bg-image {
     position: absolute;
+    top: 0;
+    bottom: 0;
     background: bg_image('pattern');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
-    min-height: 710px;
-    z-index: -1;
+  }
+
+  .content-wrapper {
+    padding: 2em 0;
+  }
+
+  .reservation-image {
+    margin: 1em auto;
+  }
+
+  h2 {
+    padding-top: 2em;
+  }
+
+  p {
+    &:last-of-type {
+      padding-top: 0;
+      padding-bottom: 2.5em;
+    }
+  }
+
+  label {
+    color: $gold;
+  }
+  
+  input {
+    padding-right: 2em;
+    
+    &#datepicker {
+      width: 100%;
+    }
+  }
+  
+  select {
+    padding-riht: 2em
+    
+    &#numbermenu {
+      width: 100%;
+    }
+  }
+  
+  .input-wrap {
+    &.input-date:after {
+      content: '\f073';
+    }
+    
+    &.input-number:after {
+      content: '\f107';
+    }
+  }
+
+  .btn {
+    display: block;
+    width: 80%;
+    margin: 2.5em auto 1.5em auto;
+    padding: .9em 2.6em;
+    font: $font-size-p $open-sans;
+    border: 1px solid $gold;
+    background: $gold;
+
+    &:hover {
+      color: $gold;
+      background: rgba($gold, .1);
+    }
   }
 }

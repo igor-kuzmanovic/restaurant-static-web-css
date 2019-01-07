@@ -1,16 +1,45 @@
 // Menu Section
 
 #menu {
-  min-height: 994px;
-  
   .bg-image {
     position: absolute;
-    background: bg_image('pattern');
+    top: 0;
+    bottom: 0;    
+    background: bg_image('pattern2');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
-    min-height: 994px;
-    z-index: -1;
+  }
+  
+  .content-wrapper {
+    padding-bottom: 2em;
+  }
+  
+  h2 {
+    padding-top: 2em;
+  }
+  
+  h3 {
+    display: inline-block;
+    width: 45%;
+    
+    &:before {
+      font-size: 0;
+    }
+    
+    &:nth-child(odd) {
+      text-align: left;
+    }
+    
+    &:nth-child(even) {
+      text-align: right;
+    }
+  }
+  
+  p {
+    padding-left: 2em;
+    text-align: left;
   }
 }

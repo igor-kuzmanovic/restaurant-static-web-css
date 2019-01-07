@@ -1,13 +1,19 @@
 // Google Fonts
 
-@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700|Lato|Open+Sans:400,400i|Yeseva+One');
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700|Lato|Open+Sans:400,400i,700|Yeseva+One');
 
 // Font Variables
 
-$gentium-book-basic: 'Gentium Book Basic', serif;
-$yeseva-one: 'Yeseva One', cursive;
-$lato: 'Lato', sans-serif;
-$open-sans: 'Open Sans', sans-serif;
+$gentium-book-basic: 'Gentium Book Basic',
+serif;
+$yeseva-one: 'Yeseva One',
+cursive;
+$lato: 'Lato',
+sans-serif;
+$open-sans: 'Open Sans',
+sans-serif;
+$georgia: 'Georgia';
+$font-awesome: 'FontAwesome';
 
 // Font Size Variables
 
@@ -17,7 +23,9 @@ $font-size-h2: 2.25em;
 $font-size-h3: 1.3125em;
 $font-size-btn: 1.125em;
 $font-size-p: 1em;
+$font-size-input: 1em;
 $font-size-label: .875em;
+$font-size-input-fa: .8125em;
 
 // Color Variables
 
@@ -25,6 +33,7 @@ $white: #ffffff;
 $gray-light: #f2f4f4;
 $gray: #7c7c7c;
 $gray-dark: #4c4c4c;
+$gray-darkest: #191919;
 $black: #000000;
 $gold-light: #dab33e;
 $gold: #c9a131;
@@ -40,4 +49,12 @@ $img-path: '../img';
 
 @function bg_image($name) {
   @return image($name + '_background.jpg');
+}
+
+// Prefix Mixins
+
+@mixin appearance($property) {
+  -webkit-appearance: $property;
+  -ms-appearance: $property;
+  appearance: $property;
 }

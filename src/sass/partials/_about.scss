@@ -1,16 +1,19 @@
 // About Section
 
 #about {
-  min-height: 710px;
-  
   .bg-image {
     position: absolute;
+    top: 0;
+    bottom: 0;    
     background: bg_image('pattern');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
-    min-height: 710px;
-    z-index: -1;
+  }
+  
+  .content-wrapper {
+    padding: 2em 0;
   }
 }

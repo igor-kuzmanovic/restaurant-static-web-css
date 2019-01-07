@@ -1,5 +1,14 @@
 // Header
 
-header {
+#header {  
   display: none;
+  min-height: 110px;
+  
+  .bg-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: $gray-darkest;
+    width: 100%;
+  }
 }

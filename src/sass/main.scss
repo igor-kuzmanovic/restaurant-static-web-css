@@ -29,38 +29,44 @@ body {
   margin: 0;
 }
 
-a,
-a:visited {
-  color: $white;
-  text-decoration: none;
-}
-
 body {
   height: 100%;
   font: $font-size-base $yeseva-one;
   color: $white;
-  line-height: 1.5;
   text-align: center;
 }
 
+header,
+section,
+footer,
+.content-wrapper {
+  position: relative;
+}
+
 h1 {
-  padding: 0.3em 0;
-  font: $font-size-h1 $gentium-book-basic;
+  padding: .3em 0;
+  font-weight: 400;
+  font-size: $font-size-h1;
+
+  @media screen and (max-width: 550px) {
+    font-size: $font-size-h1 * .65;
+  }
 }
 
 h2 {
-  padding: 0.5em 0;
-  font: $font-size-h2 $yeseva-one;
-}
-
-h3 {
-  padding: 0.7em 0;
-  font-size: $font-size-h3;
-}
-
-h2,
-h3 {
+  padding: .5em 0;
   font-weight: 400;
+  font-size: $font-size-h2;
+
+  &.text-gold {
+    color: $gold-dark;
+  }
+}
+
+h3 {
+  padding: .7em 0;
+  font-weight: 400;
+  font-size: $font-size-h3;
 
   &.text-gold {
     color: $gold-dark;
@@ -68,49 +74,117 @@ h3 {
 }
 
 p {
-  padding: 1em 0;
   font: $font-size-p $lato;
+  padding: 1em 1.5em;
+  line-height: 1.5em;
 
   &.text-gray {
     color: $gray-dark;
   }
 }
 
+blockquote {
+  font: $font-size-p * 1.2 $gentium-book-basic;
+  padding: 1em 1.5em;
+  line-height: 1.5em;
+}
+
+
 img {
+  margin: 0 auto;
   display: block;
   max-width: 100%;
   height: auto;
+}
 
-  &.decorator {
-    margin: .5em auto;
+a,
+a:visited {
+  color: $white;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+hr {
+  margin: 0 auto;
+  width: 95%;
+}
+
+label {
+  font: $font-size-label $open-sans;
+  font-weight: 700;
+  margin-bottom: .5em;
+  text-align: center;
+  display: block;
+}
+
+input {
+  font: $font-size-input $open-sans;
+  width: 80%;
+  padding: .3em .5em;
+  margin: 0 auto 1.5em auto;
+  outline: none;
+  border: 1px solid rgba($gray, .5);
+  color: $black;
+  display: block;
+
+  &::placeholder {
+    font-style: italic;
+    color: $gray;
+  }
+
+  &:focus {
+    border: 1px solid $gold;
   }
 }
 
-.btn {
-  display: inline-block;
-  margin: 1em .5em;
-  padding: .9em 2.6em;
-  font: $font-size-btn $lato;
-  text-transform: uppercase;
+select {
+  width: 80%;
+  padding: .3em .5em;
+  margin: 0 auto 1.5em auto;
+  font: $font-size-input $open-sans;
+  font-style: italic;
+  outline: none;
+  border: 1px solid rgba($gray, .5);
+  display: block;
+  cursor: pointer;
+  @include appearance(none);
 
-  &.btn-black {
-    border: 1px solid rgba($black, .8);
-    background: rgba($black, .5);
-
-    &:hover {
-      border-color: $black;
-      background: rgba($black, .8);
-    }
+  &:invalid {
+    color: $gray;
   }
+  
+  [disabled] {
+    color: $gray;
+  }
+  
+  option {
+    color: $black;
+  }
+}
 
-  &.btn-white {
-    border: 1px solid rgba($white, .8);
-    background: rgba($white, .5);
+.input-wrap {
+  position: relative;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
 
-    &:hover {
-      border-color: rgba($black, .8);
-      background: $white;
-      color: rgba($black, .8);
-    }
+  &:after {
+    content: '';
+    font-family: $font-awesome;
+    position: absolute;
+    width: 2em;
+    top: 0;
+    right: 0;
+    line-height: 2.2em;
+    color: $gray;
+    cursor: pointer;
   }
 }
