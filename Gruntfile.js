@@ -9,11 +9,11 @@ module.exports = function (grunt) {
 
     watch: {
       sass: {
-        files: 'src/sass/*.scss',
+        files: 'src/sass/**/*.scss',
         tasks: ['sass', 'cssmin']
       },
       js: {
-        files: 'src/js/*.js',
+        files: 'src/js/**/*.js',
         tasks: ['concat', 'uglify']
       }
     },
@@ -33,18 +33,15 @@ module.exports = function (grunt) {
     cssmin: {
       target: {
         files: {
-          'dist/css/styles.min.css' : 'dist/css/styles.css'
+          'dist/css/main.min.css' : 'dist/css/main.css'
         }
       }
     },
 
     concat: {
-      options: {
-        serparator: ';',
-      },
       dist: {
         files: {
-          'dist/js/scripts.js' : 'src/js/*.js'
+          'dist/js/main.js' : 'src/js/**/*.js'
         }
       }
     },
@@ -52,7 +49,7 @@ module.exports = function (grunt) {
     uglify: {
       target: {
         files: { 
-          'dist/js/scripts.min.js' : 'dist/js/scripts.js'
+          'dist/js/main.min.js' : 'dist/js/main.js'
         }
       }
     }

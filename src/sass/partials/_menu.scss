@@ -1,0 +1,16 @@
+// Menu Section
+
+#menu {
+  min-height: 994px;
+  
+  .bg-image {
+    position: absolute;
+    background: bg_image('pattern');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 994px;
+    z-index: -1;
+  }
+}

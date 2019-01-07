@@ -1,0 +1,16 @@
+// Ingredients Section
+
+#ingredients {
+  min-height: 758px;
+  
+  .bg-image {
+    position: absolute;
+    background: bg_image('ingredients');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 758px;
+    z-index: -1;
+  }
+}

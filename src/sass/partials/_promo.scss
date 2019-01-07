@@ -1,0 +1,21 @@
+// Promo Section
+
+#promo {
+  min-height: 750px;
+
+  .bg-image {
+    position: absolute;
+    background: bg_image('promo');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 750px;
+    z-index: -1;
+  }
+
+  .slider-prev,
+  .slider-next {
+    display: none;
+  }
+}

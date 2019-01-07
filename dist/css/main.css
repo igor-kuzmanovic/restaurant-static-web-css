@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700|Lato|Open+Sans:400,400i|Yeseva+One");
+header {
+  display: none; }
+
+#promo {
+  min-height: 750px; }
+  #promo .bg-image {
+    position: absolute;
+    background: url("../img/promo_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 750px;
+    z-index: -1; }
+  #promo .slider-prev,
+  #promo .slider-next {
+    display: none; }
+
+#about {
+  min-height: 710px; }
+  #about .bg-image {
+    position: absolute;
+    background: url("../img/pattern_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 710px;
+    z-index: -1; }
+
+#ingredients {
+  min-height: 758px; }
+  #ingredients .bg-image {
+    position: absolute;
+    background: url("../img/ingredients_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 758px;
+    z-index: -1; }
+
+#menu {
+  min-height: 994px; }
+  #menu .bg-image {
+    position: absolute;
+    background: url("../img/pattern_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 994px;
+    z-index: -1; }
+
+#reviews {
+  min-height: 758px; }
+  #reviews .bg-image {
+    position: absolute;
+    background: url("../img/reviews_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 758px;
+    z-index: -1; }
+
+#reservations {
+  min-height: 710px; }
+  #reservations .bg-image {
+    position: absolute;
+    background: url("../img/pattern_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 710px;
+    z-index: -1; }
+
+#footer {
+  min-height: 320px; }
+  #footer .bg-image {
+    position: absolute;
+    background: url("../img/footer_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 320px;
+    z-index: -1; }
+
+* {
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+p,
+blockquote,
+ul,
+body {
+  margin: 0; }
+
+a,
+a:visited {
+  color: #ffffff;
+  text-decoration: none; }
+
+body {
+  height: 100%;
+  font: 16px "Yeseva One", cursive;
+  color: #ffffff;
+  line-height: 1.5;
+  text-align: center; }
+
+h1 {
+  padding: 0.3em 0;
+  font: 5.625em "Gentium Book Basic", serif; }
+
+h2 {
+  padding: 0.5em 0;
+  font: 2.25em "Yeseva One", cursive; }
+
+h3 {
+  padding: 0.7em 0;
+  font-size: 1.3125em; }
+
+h2,
+h3 {
+  font-weight: 400; }
+  h2.text-gold,
+  h3.text-gold {
+    color: #cc9900; }
+
+p {
+  padding: 1em 0;
+  font: 1em "Lato", sans-serif; }
+  p.text-gray {
+    color: #4c4c4c; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+  img.decorator {
+    margin: .5em auto; }
+
+.btn {
+  display: inline-block;
+  margin: 1em .5em;
+  padding: .9em 2.6em;
+  font: 1.125em "Lato", sans-serif;
+  text-transform: uppercase; }
+  .btn.btn-black {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5); }
+    .btn.btn-black:hover {
+      border-color: #000000;
+      background: rgba(0, 0, 0, 0.8); }
+  .btn.btn-white {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.5); }
+    .btn.btn-white:hover {
+      border-color: rgba(0, 0, 0, 0.8);
+      background: #ffffff;
+      color: rgba(0, 0, 0, 0.8); }

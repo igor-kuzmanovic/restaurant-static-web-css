@@ -1,0 +1,116 @@
+// Imports
+
+@import 'base';
+
+// Partials - Sections
+
+@import 'partials/header';
+@import 'partials/promo';
+@import 'partials/about';
+@import 'partials/ingredients';
+@import 'partials/menu';
+@import 'partials/reviews';
+@import 'partials/reservations';
+@import 'partials/footer';
+
+// Global
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+blockquote,
+ul,
+body {
+  margin: 0;
+}
+
+a,
+a:visited {
+  color: $white;
+  text-decoration: none;
+}
+
+body {
+  height: 100%;
+  font: $font-size-base $yeseva-one;
+  color: $white;
+  line-height: 1.5;
+  text-align: center;
+}
+
+h1 {
+  padding: 0.3em 0;
+  font: $font-size-h1 $gentium-book-basic;
+}
+
+h2 {
+  padding: 0.5em 0;
+  font: $font-size-h2 $yeseva-one;
+}
+
+h3 {
+  padding: 0.7em 0;
+  font-size: $font-size-h3;
+}
+
+h2,
+h3 {
+  font-weight: 400;
+
+  &.text-gold {
+    color: $gold-dark;
+  }
+}
+
+p {
+  padding: 1em 0;
+  font: $font-size-p $lato;
+
+  &.text-gray {
+    color: $gray-dark;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  &.decorator {
+    margin: .5em auto;
+  }
+}
+
+.btn {
+  display: inline-block;
+  margin: 1em .5em;
+  padding: .9em 2.6em;
+  font: $font-size-btn $lato;
+  text-transform: uppercase;
+
+  &.btn-black {
+    border: 1px solid rgba($black, .8);
+    background: rgba($black, .5);
+
+    &:hover {
+      border-color: $black;
+      background: rgba($black, .8);
+    }
+  }
+
+  &.btn-white {
+    border: 1px solid rgba($white, .8);
+    background: rgba($white, .5);
+
+    &:hover {
+      border-color: rgba($black, .8);
+      background: $white;
+      color: rgba($black, .8);
+    }
+  }
+}
