@@ -89,7 +89,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  background: url("../img/pattern2_background.jpg");
+  background: url("../img/pattern_background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -244,7 +244,7 @@ h1 {
   font-size: 5.625em; }
   @media screen and (max-width: 550px) {
     h1 {
-      font-size: 3.65625em; } }
+      font-size: 3.375em; } }
 
 h2 {
   padding: .5em 0;
@@ -344,7 +344,8 @@ select {
   margin: 0 auto; }
   .input-wrap:after {
     content: '';
-    font-family: "FontAwesome";
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Regular", "FontAwesome";
+    font-weight: 900;
     position: absolute;
     width: 2em;
     top: 0;

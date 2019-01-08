@@ -49,7 +49,7 @@ h1 {
   font-size: $font-size-h1;
 
   @media screen and (max-width: 550px) {
-    font-size: $font-size-h1 * .65;
+    font-size: $font-size-h1 * .60;
   }
 }
 
@@ -180,6 +180,7 @@ select {
   &:after {
     content: '';
     font-family: $font-awesome;
+    font-weight: 900;
     position: absolute;
     width: 2em;
     top: 0;
