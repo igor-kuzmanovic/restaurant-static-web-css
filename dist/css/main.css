@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700|Lato|Open+Sans:400,400i,700|Yeseva+One");
+@import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
 #header {
   display: none;
   min-height: 110px; }
@@ -175,8 +176,9 @@
     width: 100%; }
 
 #reservations select {
-  padding-riht: 2em #reservations select #numbermenu;
-    padding-riht-width: 100%; }
+  padding-right: 2em; }
+  #reservations select#numbermenu {
+    width: 100%; }
 
 #reservations .input-wrap.input-date:after {
   content: '\f073'; }
@@ -324,6 +326,7 @@ select {
   border: 1px solid rgba(124, 124, 124, 0.5);
   display: block;
   cursor: pointer;
+  background-color: #ffffff;
   -webkit-appearance: none;
   -ms-appearance: none;
   appearance: none; }
