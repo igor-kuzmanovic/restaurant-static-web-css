@@ -10,44 +10,46 @@
     background: #191919;
     width: 100%; }
 
-#promo {
-  min-height: 90vh; }
-  #promo .bg-image {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    background: url("../img/promo_background.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%; }
-  #promo .content-wrapper {
-    padding-top: 2em; }
-  #promo h1 {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); }
-  #promo .btn {
-    display: block;
-    width: 80%;
-    margin: 1em auto;
-    padding: .9em 2.6em;
-    font: 1.125em "Lato", sans-serif;
-    text-transform: uppercase; }
-    #promo .btn.btn-black {
-      border: 1px solid rgba(0, 0, 0, 0.8);
-      background: rgba(0, 0, 0, 0.5); }
-      #promo .btn.btn-black:hover {
-        border-color: #000000;
-        background: rgba(0, 0, 0, 0.8); }
-    #promo .btn.btn-white {
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      background: rgba(255, 255, 255, 0.5); }
-      #promo .btn.btn-white:hover {
-        border-color: #ffffff;
-        background: rgba(255, 255, 255, 0.2); }
-  #promo .slider-prev,
-  #promo .slider-next {
-    display: none; }
+#promo .bg-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: url("../img/promo_background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%; }
+
+#promo .content-wrapper {
+  padding-top: 2em; }
+
+#promo h1 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); }
+
+#promo .btn {
+  display: block;
+  width: 80%;
+  margin: 1em auto;
+  padding: .9em 2.6em;
+  font: 1.125em "Lato", sans-serif;
+  text-transform: uppercase; }
+  #promo .btn.btn-black {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5); }
+    #promo .btn.btn-black:hover {
+      border-color: #000000;
+      background: rgba(0, 0, 0, 0.8); }
+  #promo .btn.btn-white {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.5); }
+    #promo .btn.btn-white:hover {
+      border-color: #ffffff;
+      background: rgba(255, 255, 255, 0.2); }
+
+#promo .slider-prev,
+#promo .slider-next {
+  display: none; }
 
 #about .bg-image {
   position: absolute;
