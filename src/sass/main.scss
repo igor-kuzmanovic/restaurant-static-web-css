@@ -51,6 +51,15 @@ h1 {
   @media screen and (max-width: 550px) {
     font-size: $font-size-h1 * .60;
   }
+  
+  @media screen and (max-width: 320px) {
+    font-size: $font-size-h1 * .50;
+  }
+  
+  @media screen and (max-width: 300px) {
+    font-size: $font-size-h1 * .50;
+    overflow: hidden;
+  }
 }
 
 h2 {
@@ -60,6 +69,10 @@ h2 {
 
   &.text-gold {
     color: $gold-dark;
+  }
+  
+  @media screen and (max-width: 300px) {
+    font-size: $font-size-h2 * .60;
   }
 }
 
