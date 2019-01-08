@@ -163,7 +163,6 @@ select {
   padding: .3em .5em;
   margin: 0 auto 1.5em auto;
   font: $font-size-input $open-sans;
-  font-style: italic;
   outline: none;
   border: 1px solid rgba($gray, .5);
   display: block;
@@ -173,10 +172,12 @@ select {
 
   &:invalid {
     color: $gray;
+    font-style: italic;
   }
   
   [disabled] {
     color: $gray;
+    font-style: italic;
   }
   
   option {

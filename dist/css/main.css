@@ -333,7 +333,6 @@ select {
   padding: .3em .5em;
   margin: 0 auto 1.5em auto;
   font: 1em "Open Sans", sans-serif;
-  font-style: italic;
   outline: none;
   border: 1px solid rgba(124, 124, 124, 0.5);
   display: block;
@@ -343,9 +342,11 @@ select {
   -ms-appearance: none;
   appearance: none; }
   select:invalid {
-    color: #7c7c7c; }
+    color: #7c7c7c;
+    font-style: italic; }
   select [disabled] {
-    color: #7c7c7c; }
+    color: #7c7c7c;
+    font-style: italic; }
   select option {
     color: #000000; }
 
