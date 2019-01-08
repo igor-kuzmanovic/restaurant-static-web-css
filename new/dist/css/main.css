@@ -1,14 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700|Lato|Open+Sans:400,400i,700|Yeseva+One");
 @import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
 #header {
-  display: none;
-  min-height: 110px; }
-  #header .bg-image {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    background: #191919;
-    width: 100%; }
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 110px; }
+  @media screen and (min-width: 960px) {
+    #header {
+      display: none; } }
+  @media screen and (max-width: 960px) {
+    #header {
+      display: none; } }
+  #header a.logo img {
+    height: 110px; }
+  #header ul {
+    font-size: 1.3125em; }
+  #header li a {
+    padding: 45px 20px 44px 20px; }
+    #header li a.nav-link {
+      font-family: "Gentium Book Basic", serif; }
+      #header li a.nav-link.active:before {
+        background: rgba(124, 124, 124, 0.6);
+        content: "";
+        display: block;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 4px; }
+    #header li a.social-link {
+      color: #dab33e; }
 
 #promo .bg-image {
   position: absolute;
@@ -22,7 +43,10 @@
   width: 100%; }
 
 #promo .content-wrapper {
-  padding: 2em 0; }
+  padding: calc(2em + 110px) 0; }
+  @media screen and (max-width: 480px) {
+    #promo .content-wrapper {
+      padding: 2em 0; } }
 
 #promo h1 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); }
@@ -350,9 +374,6 @@ a:visited {
 ul {
   padding: 0;
   list-style: none; }
-
-li {
-  display: inline-block; }
 
 hr {
   margin: 0 auto;

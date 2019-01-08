@@ -14,7 +14,11 @@
   }
 
   .content-wrapper {
-    padding: 2em 0;
+    padding: calc(2em + 110px) 0;
+
+    @media screen and (max-width: 480px) {
+      padding: 2em 0;
+    }
   }
 
   h1 {
