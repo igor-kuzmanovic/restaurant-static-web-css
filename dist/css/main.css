@@ -348,7 +348,8 @@ select {
     color: #7c7c7c;
     font-style: italic; }
   select option {
-    color: #000000; }
+    color: #000000;
+    font-style: normal; }
 
 .input-wrap {
   position: relative;
