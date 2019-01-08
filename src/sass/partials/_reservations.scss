@@ -6,7 +6,7 @@
     top: 0;
     bottom: 0;
     background: bg_image('pattern');
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -35,28 +35,89 @@
   label {
     color: $gold;
   }
-  
+
   input {
+    font: $font-size-input $open-sans;
+    width: 80%;
+    padding: .3em .5em;
     padding-right: 2em;
-    
+    margin: 0 auto 1.5em auto;
+    outline: none;
+    border: 1px solid rgba($gray, .5);
+    color: $black;
+    display: block;
+
     &#datepicker {
       width: 100%;
+      cursor: pointer;
+    }
+
+    &::placeholder {
+      font-style: italic;
+      color: $gray;
+    }
+
+    &:focus {
+      border: 1px solid $gold;
     }
   }
-  
+
   select {
+    width: 80%;
+    padding: .3em .5em;
     padding-right: 2em;
-    
+    margin: 0 auto 1.5em auto;
+    font: $font-size-input $open-sans;
+    outline: none;
+    border: 1px solid rgba($gray, .5);
+    display: block;
+    cursor: pointer;
+    background-color: $white;
+    @include appearance(none);
+
     &#numbermenu {
       width: 100%;
     }
+
+    &:invalid {
+      color: $gray;
+      font-style: italic;
+    }
+
+    [disabled] {
+      color: $gray;
+      font-style: italic;
+    }
+
+    option {
+      color: $black;
+      font-style: normal;
+    }
   }
-  
+
   .input-wrap {
+    position: relative;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+
+    &:after {
+      content: '';
+      font-family: $font-awesome;
+      font-weight: 900;
+      position: absolute;
+      width: 2em;
+      top: 0;
+      right: 0;
+      line-height: 2.2em;
+      color: $gray;
+      pointer-events: none;
+    }
+
     &.input-date:after {
       content: '\f073';
     }
-    
+
     &.input-number:after {
       content: '\f107';
     }

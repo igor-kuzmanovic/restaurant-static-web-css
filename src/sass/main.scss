@@ -51,11 +51,11 @@ h1 {
   @media screen and (max-width: 550px) {
     font-size: $font-size-h1 * .60;
   }
-  
+
   @media screen and (max-width: 320px) {
     font-size: $font-size-h1 * .50;
   }
-  
+
   @media screen and (max-width: 300px) {
     font-size: $font-size-h1 * .50;
     overflow: hidden;
@@ -70,7 +70,7 @@ h2 {
   &.text-gold {
     color: $gold-dark;
   }
-  
+
   @media screen and (max-width: 300px) {
     font-size: $font-size-h2 * .60;
   }
@@ -98,7 +98,7 @@ p {
 
 blockquote {
   font: $font-size-p * 1.2 $gentium-book-basic;
-  padding: 1em 1.5em;
+  padding: 1em 2em;
   line-height: 1.5em;
 }
 
@@ -138,70 +138,8 @@ label {
   display: block;
 }
 
-input {
-  font: $font-size-input $open-sans;
-  width: 80%;
-  padding: .3em .5em;
-  margin: 0 auto 1.5em auto;
-  outline: none;
-  border: 1px solid rgba($gray, .5);
-  color: $black;
-  display: block;
-
-  &::placeholder {
-    font-style: italic;
-    color: $gray;
-  }
-
-  &:focus {
-    border: 1px solid $gold;
-  }
-}
-
-select {
-  width: 80%;
-  padding: .3em .5em;
-  margin: 0 auto 1.5em auto;
-  font: $font-size-input $open-sans;
-  outline: none;
-  border: 1px solid rgba($gray, .5);
-  display: block;
-  cursor: pointer;
-  background-color: $white;
-  @include appearance(none);
-
-  &:invalid {
-    color: $gray;
-    font-style: italic;
-  }
-  
-  [disabled] {
-    color: $gray;
-    font-style: italic;
-  }
-  
-  option {
-    color: $black;
-    font-style: normal;
-  }
-}
-
-.input-wrap {
-  position: relative;
-  width: 80%;
-  display: block;
-  margin: 0 auto;
-
-  &:after {
-    content: '';
-    font-family: $font-awesome;
-    font-weight: 900;
-    position: absolute;
-    width: 2em;
-    top: 0;
-    right: 0;
-    line-height: 2.2em;
-    color: $gray;
-    cursor: pointer;
+.bg-image {
+  @media screen and (max-width: 480px) {
+    background-attachment: scroll;
   }
 }

@@ -15,7 +15,7 @@
   top: 0;
   bottom: 0;
   background: url("../img/promo_background.jpg");
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -56,7 +56,7 @@
   top: 0;
   bottom: 0;
   background: url("../img/pattern_background.jpg");
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -70,7 +70,7 @@
   top: 0;
   bottom: 0;
   background: url("../img/ingredients_background.jpg");
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -92,7 +92,7 @@
   top: 0;
   bottom: 0;
   background: url("../img/pattern_background.jpg");
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -123,7 +123,7 @@
   top: 0;
   bottom: 0;
   background: url("../img/reviews_background.jpg");
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -136,21 +136,23 @@
 
 #reviews blockquote:before {
   content: open-quote;
-  display: block;
   position: absolute;
-  transform: translate(-0.2em, 0.3em);
+  left: .2em;
   font-family: "Georgia";
-  font-size: 6em;
+  font-size: 4em;
   font-weight: 400;
-  line-height: 0;
+  line-height: .6em;
   color: rgba(242, 244, 244, 0.8); }
+  @media screen and (max-width: 480px) {
+    #reviews blockquote:before {
+      left: .1em; } }
 
 #reservations .bg-image {
   position: absolute;
   top: 0;
   bottom: 0;
   background: url("../img/pattern_background.jpg");
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -173,20 +175,70 @@
   color: #c9a131; }
 
 #reservations input {
-  padding-right: 2em; }
+  font: 1em "Open Sans", sans-serif;
+  width: 80%;
+  padding: .3em .5em;
+  padding-right: 2em;
+  margin: 0 auto 1.5em auto;
+  outline: none;
+  border: 1px solid rgba(124, 124, 124, 0.5);
+  color: #000000;
+  display: block; }
   #reservations input#datepicker {
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
+  #reservations input::placeholder {
+    font-style: italic;
+    color: #7c7c7c; }
+  #reservations input:focus {
+    border: 1px solid #c9a131; }
 
 #reservations select {
-  padding-right: 2em; }
+  width: 80%;
+  padding: .3em .5em;
+  padding-right: 2em;
+  margin: 0 auto 1.5em auto;
+  font: 1em "Open Sans", sans-serif;
+  outline: none;
+  border: 1px solid rgba(124, 124, 124, 0.5);
+  display: block;
+  cursor: pointer;
+  background-color: #ffffff;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none; }
   #reservations select#numbermenu {
     width: 100%; }
+  #reservations select:invalid {
+    color: #7c7c7c;
+    font-style: italic; }
+  #reservations select [disabled] {
+    color: #7c7c7c;
+    font-style: italic; }
+  #reservations select option {
+    color: #000000;
+    font-style: normal; }
 
-#reservations .input-wrap.input-date:after {
-  content: '\f073'; }
-
-#reservations .input-wrap.input-number:after {
-  content: '\f107'; }
+#reservations .input-wrap {
+  position: relative;
+  width: 80%;
+  display: block;
+  margin: 0 auto; }
+  #reservations .input-wrap:after {
+    content: '';
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Regular", "FontAwesome";
+    font-weight: 900;
+    position: absolute;
+    width: 2em;
+    top: 0;
+    right: 0;
+    line-height: 2.2em;
+    color: #7c7c7c;
+    pointer-events: none; }
+  #reservations .input-wrap.input-date:after {
+    content: '\f073'; }
+  #reservations .input-wrap.input-number:after {
+    content: '\f107'; }
 
 #reservations .btn {
   display: block;
@@ -281,7 +333,7 @@ p {
 
 blockquote {
   font: 1.2em "Gentium Book Basic", serif;
-  padding: 1em 1.5em;
+  padding: 1em 2em;
   line-height: 1.5em; }
 
 img {
@@ -313,57 +365,6 @@ label {
   text-align: center;
   display: block; }
 
-input {
-  font: 1em "Open Sans", sans-serif;
-  width: 80%;
-  padding: .3em .5em;
-  margin: 0 auto 1.5em auto;
-  outline: none;
-  border: 1px solid rgba(124, 124, 124, 0.5);
-  color: #000000;
-  display: block; }
-  input::placeholder {
-    font-style: italic;
-    color: #7c7c7c; }
-  input:focus {
-    border: 1px solid #c9a131; }
-
-select {
-  width: 80%;
-  padding: .3em .5em;
-  margin: 0 auto 1.5em auto;
-  font: 1em "Open Sans", sans-serif;
-  outline: none;
-  border: 1px solid rgba(124, 124, 124, 0.5);
-  display: block;
-  cursor: pointer;
-  background-color: #ffffff;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none; }
-  select:invalid {
-    color: #7c7c7c;
-    font-style: italic; }
-  select [disabled] {
-    color: #7c7c7c;
-    font-style: italic; }
-  select option {
-    color: #000000;
-    font-style: normal; }
-
-.input-wrap {
-  position: relative;
-  width: 80%;
-  display: block;
-  margin: 0 auto; }
-  .input-wrap:after {
-    content: '';
-    font-family: "Font Awesome 5 Free", "Font Awesome 5 Regular", "FontAwesome";
-    font-weight: 900;
-    position: absolute;
-    width: 2em;
-    top: 0;
-    right: 0;
-    line-height: 2.2em;
-    color: #7c7c7c;
-    cursor: pointer; }
+@media screen and (max-width: 480px) {
+  .bg-image {
+    background-attachment: scroll; } }
