@@ -118,7 +118,7 @@
 #promo .slide-next {
   position: absolute;
   top: 50%;
-  font-size: 10vh;
+  font-size: 10vmin;
   color: #ffffff;
   cursor: pointer; }
   #promo .slide-prev:hover,
