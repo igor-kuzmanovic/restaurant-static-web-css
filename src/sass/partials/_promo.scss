@@ -1,0 +1,130 @@
+// Promo Section
+
+#promo {
+  .bg-img-1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: bg_image('promo');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+  }
+  
+  .bg-img-2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: bg_image('random');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+  }
+  
+  .bg-img-3 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: bg_image('random2');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+  }
+
+  .content-wrapper {
+    @media screen and (max-width: 480px) {
+      padding-top: 2em;
+    }
+  }
+
+  h1 {
+    text-shadow: 1px 1px 2px rgba($black, .7);
+  }
+
+  .btn {
+    display: block;
+    width: 80%;
+    margin: 1em auto;
+    padding: 1em 2.5em;
+    font: $font-size-btn $lato;
+    text-transform: uppercase;
+
+    &.btn-black {
+      border: 1px solid rgba($black, .8);
+      background: rgba($black, .5);
+
+      &:hover {
+        border-color: $black;
+        background: rgba($black, .8);
+      }
+    }
+
+    &.btn-white {
+      border: 1px solid rgba($white, .8);
+      background: rgba($white, .5);
+
+      &:hover {
+        border-color: $white;
+        background: rgba($white, .2);
+      }
+    }
+  }
+
+  .slide-prev,
+  .slide-next {
+    position: absolute;
+    top: 50%;
+
+    font-size: 10vh;
+    color: $white;
+    cursor: pointer;
+    
+    &:hover {
+      color: $gold;
+    }
+  }
+
+  .slide-next {
+    right: 5%;
+  }
+
+  .slide-prev {
+    left: 5%;
+  }
+}
+
+#promo {
+  @media screen and (min-width: 700px) {
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: 14fr 97fr 14fr;
+      grid-template-rows: $grid-row * 1.5 minmax(500px, auto) $grid-row * 1.5;
+      grid-template-areas:
+        ". . ."
+        ". promo ."
+        ". . .";
+      justify-content: center;
+      align-content: center;
+    }
+
+    .promo {
+      grid-area: promo;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-content: center;
+    }
+
+    .btn {
+      display: inline-block;
+      width: auto;
+      margin: 1em 1em;
+    }
+  }
+}

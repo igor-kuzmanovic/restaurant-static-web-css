@@ -1,0 +1,44 @@
+// About Section
+
+#about {
+  .bg-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: bg_image('pattern');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+  }
+}
+
+#about {
+  @media screen and (min-width: 700px) {
+    .content-wrapper {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 11fr 43fr 67fr 4fr;
+      grid-template-rows: $grid-row minmax(510px, auto) $grid-row;
+      grid-template-areas:
+        ". . . ."
+        ". cook dish ."
+        ". . . .";
+      justify-content: center;
+      align-content: center;
+    }
+
+    .cook {
+      grid-area: cook;
+    }
+
+    .dish {
+      grid-area: dish;
+      
+      img {
+        max-height: 100%
+      }
+    }
+  }
+}

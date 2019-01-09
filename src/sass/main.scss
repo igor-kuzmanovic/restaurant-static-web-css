@@ -1,0 +1,147 @@
+// Imports
+
+@import 'base';
+
+// Partials - Sections
+
+@import 'partials/header';
+@import 'partials/promo';
+@import 'partials/about';
+@import 'partials/ingredients';
+@import 'partials/menu';
+@import 'partials/reviews';
+@import 'partials/reservations';
+@import 'partials/footer';
+
+// Global
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+blockquote,
+ul,
+body {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font: $font-size-base $yeseva-one;
+  color: $white;
+  text-align: center;
+}
+
+header,
+section,
+footer,
+.content-wrapper {
+  position: relative;
+  min-width: 100%;
+  max-width: 1250px;
+}
+
+.content-wrapper {
+  padding: 2em 0;
+}
+
+.bg-image {
+  @media screen and (max-width: 480px) {
+    background-attachment: scroll !important;
+  }
+}
+
+h1 {
+  padding: .3em;
+  font-weight: 400;
+  font-size: $font-size-h1;
+
+  @media screen and (max-width: 550px) {
+    font-size: $font-size-h1 * .6;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: $font-size-h1 * .5;
+  }
+
+  @media screen and (max-width: 300px) {
+    overflow: hidden;
+  }
+}
+
+h2 {
+  padding: .5em;
+  font-weight: 400;
+  font-size: $font-size-h2;
+
+  &.text-gold {
+    color: $gold-dark;
+  }
+
+  @media screen and (max-width: 300px) {
+    font-size: $font-size-h2 * .6;
+  }
+}
+
+h3 {
+  padding: .7em;
+  font-weight: 400;
+  font-size: $font-size-h3;
+
+  &.text-gold {
+    color: $gold-dark;
+  }
+}
+
+p {
+  font: $font-size-p $lato;
+  padding: 1em 2em;
+  line-height: 1.5em;
+
+  &.text-gray {
+    color: $gray-dark;
+  }
+}
+
+blockquote {
+  font: $font-size-blockquote $gentium-book-basic;
+  padding: 1em 2em;
+  line-height: 1.5em;
+}
+
+
+img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+a:visited {
+  color: $white;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+hr {
+  margin: 0 auto;
+  width: 95%;
+  border-top: 1px solid $gold;
+}
+
+label {
+  font: $font-size-label $open-sans;
+  font-weight: 700;
+  margin: .5em;
+  text-align: center;
+  display: block;
+}

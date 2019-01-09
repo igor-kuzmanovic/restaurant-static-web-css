@@ -1,0 +1,88 @@
+// Header
+
+#header {
+  position: absolute;
+  z-index: 1;
+  height: $header-height;
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+
+  .content-wrapper {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+  }
+
+  nav {
+    margin-left: 10%;
+    flex: 1;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+
+  a {
+    &.logo {
+      img {
+        height: $header-height;
+      }
+    }
+  }
+
+  ul {
+    font-size: $font-size-nav;
+    margin: auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    list-style: none;
+
+    &.nav-menu {
+      flex-wrap: wrap;
+      flex: 10
+    }
+
+    &.social-menu {
+      flex: 1
+    }
+  }
+
+  li {
+    a {
+      padding: 39px 20px 45px 20px;
+      border-top: 6px solid rgba(0, 0, 0, 0);
+
+      &.nav-link {
+        font-family: $gentium-book-basic;
+
+        &:hover {
+          border-top: 6px solid rgba($gray-light, .7);
+          color: $gold-light;
+        }
+
+        &.active {
+          border-top: 6px solid rgba($gray-light, .7);
+        }
+      }
+
+      &.social-link {
+        color: $gold-light;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}

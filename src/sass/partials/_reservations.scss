@@ -1,0 +1,209 @@
+// Reservations Section
+
+#reservations {
+  .bg-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: bg_image('pattern');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+  }
+
+  p {
+    &:last-of-type {
+      padding-top: 0;
+      padding-bottom: 2.5em;
+    }
+  }
+
+  label {
+    color: $gold;
+  }
+  
+  input,
+  select {
+    width: 80%;
+    padding: .3em .5em;
+    padding-right: 2em;
+    margin: 0 auto 1.5em auto;
+    font: $font-size-input $open-sans;
+    outline: none;
+    border: 1px solid rgba($gray, .5);
+    display: block;
+  }
+
+  input {
+    color: $black;
+
+    &#datepicker {
+      width: 100%;
+    }
+
+    &::placeholder {
+      font-style: italic;
+      color: $gray;
+    }
+
+    &:focus {
+      border: 1px solid $gold;
+    }
+  }
+
+  select {
+    background-color: $white;
+    @include appearance(none);
+
+    &#numbermenu {
+      width: 100%;
+    }
+
+    &:invalid,
+    [disabled] {
+      color: $gray;
+      font-style: italic;
+    }
+
+    option {
+      color: $black;
+      font-style: normal;
+    }
+  }
+
+  .input-wrap {
+    position: relative;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+
+    &:after {
+      content: '';
+      font-family: $font-awesome;
+      font-weight: 900;
+      position: absolute;
+      width: 2em;
+      top: 0;
+      right: 0;
+      line-height: 2.2em;
+      color: $gray;
+      pointer-events: none;
+    }
+
+    &.input-date:after {
+      content: '\f073';
+    }
+
+    &.input-number:after {
+      content: '\f107';
+    }
+  }
+
+  .btn {
+    display: block;
+    width: 80%;
+    margin: 2.5em auto 0 auto;
+    padding: 0.5em 2.5em;
+    font: $font-size-p $open-sans;
+    border: 1px solid $gold;
+    background: $gold;
+
+    &:hover {
+      color: $gold;
+      background: rgba($gold, .1);
+    }
+  }
+}
+
+#reservations {
+  @media screen and (min-width: 700px) {
+    .content-wrapper {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 4fr 27fr 3fr 27fr 10fr 43fr 11fr;
+      grid-template-rows: $grid-row minmax(508px, auto) $grid-row;
+      grid-template-areas:
+        ". . . . . . ."
+        ". image-1 . image-2 . reservation ."
+        ". . . . . . .";
+      justify-content: center;
+      align-content: center;
+    }
+    
+    .reservation-images {
+      margin: 0;
+    }
+    
+    .reservation-image {
+      margin: auto 0;
+    }
+    
+    .image-1 {
+      grid-area: image-1;
+    }
+    
+    .image-2 {
+      grid-area: image-2;
+    }
+    
+    .reservation {
+      grid-area: reservation;
+    }
+    
+    form {
+      display: grid;
+      grid-template-columns: 20fr 3fr 20fr;
+      grid-template-areas:
+        "name . email"
+        "date . party";
+      justify-content: center;
+      align-content: center;
+    }
+    
+    .res-name {
+      grid-area: name;
+    }
+    
+    .res-email {
+      grid-area: email
+    }
+    
+    .res-date {
+      grid-area: date
+    }
+    
+    .res-party {
+      grid-area: party
+    }
+    
+    h2 {
+      padding-top: 0;
+    }
+    
+    p:last-of-type {
+      padding-bottom: 1em;
+    }
+    
+    label {
+      text-align: left;
+    }
+    
+    input {
+      margin: 0;
+      width: 100%;
+    }
+    
+    .input-wrap {
+      width: 100%;
+    }
+    
+    .btn {
+      display: inline-block;
+      width: auto;
+      min-width: 50%;
+      margin: 0 auto;
+    }
+  }
+}

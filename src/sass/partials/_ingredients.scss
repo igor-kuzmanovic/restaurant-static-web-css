@@ -1,0 +1,61 @@
+// Ingredients Section
+
+#ingredients {
+  .bg-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: bg_image('ingredients');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+  }
+  
+  .ingredients {
+    background: rgba($black, .3);
+    box-shadow: inset 0 0 5em 3em rgba($black, .5);
+  }
+
+  .ingredient {
+    margin-top: 2em;
+    display: inline-block;
+    border-radius: 50%;
+    border: 5px solid rgba($gray, .3);
+  }
+}
+
+#ingredients {
+  @media screen and (min-width: 700px) {
+    .content-wrapper {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 64fr 54fr 7fr;
+      grid-template-rows: $grid-row minmax(557px, auto) $grid-row;
+      grid-template-areas:
+        ". . ."
+        ". ingredients ."
+        ". . .";
+      justify-content: center;
+      align-content: center;
+    }
+
+    .ingredients {
+      grid-area: ingredients;
+      padding: $grid-col-lg;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-content: center;
+    }
+    
+    .ingredient{
+      margin: 0 .5vw;
+    }
+    
+    h2 {
+      padding-top: 0;
+    }
+  }
+}

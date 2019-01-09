@@ -1,0 +1,102 @@
+// Menu Section
+
+#menu {
+  .bg-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: bg_image('pattern2');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+  }
+
+  .content-wrapper {
+    grid-area: menu;
+  }
+
+  .item-name-price {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .item {
+    margin: 1em .5em;
+  }
+
+  .special {
+    outline: 1px solid $gold;
+    outline-offset: .5em;
+
+    @media screen and (max-width: 700px) {
+      outline-offset: 0;
+    }
+  }
+
+  .special-wrapper {
+    position: relative;
+
+    &:after {
+      content: "Special";
+      position: absolute;
+      background-color: $gold;
+      width: 4em;
+      height: 1.5em;
+      font-family: "Lato";
+      font-size: $font-size-label;
+      color: $white;
+      top: -2.1em;
+      right: -1px;
+
+      @media screen and (max-width: 700px) {
+        top: -1.5em;
+        right: .5em;
+      }
+    }
+  }
+}
+
+#menu {
+  @media screen and (min-width: 700px) {
+    .content-wrapper {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 11fr 43fr 17fr 43fr 11fr;
+      grid-template-rows: $grid-row minmax(794px, auto) $grid-row;
+      grid-template-areas:
+        ". . . . ."
+        ". menu1 . menu2 ."
+        ". . . . .";
+      justify-content: center;
+      align-content: center;
+    }
+
+    .menu-1 {
+      grid-area: menu1;
+    }
+
+    .menu-2 {
+      grid-area: menu2;
+    }
+
+    p {
+      text-align: left;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    hr {
+      width: 100%
+    }
+
+    h3 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

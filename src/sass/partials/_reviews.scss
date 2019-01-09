@@ -1,0 +1,103 @@
+// Reviews Section
+
+#reviews {
+  .bg-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: bg_image('reviews');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+  }
+
+  .review {
+    background: rgba($black, .7);
+    box-shadow: inset 0 0 5em 3em rgba($black, .5);
+  }
+
+  .openquote {
+    display: none;
+    font-family: $georgia;
+    font-size: 6em;
+    color: rgba($gray-light, .8);
+  }
+
+  blockquote {
+    &:before {
+      content: open-quote;
+      position: absolute;
+      left: .2em;
+      font-family: $georgia;
+      font-size: 4em;
+      font-weight: 400;
+      line-height: .6em;
+      color: rgba($gray-light, .8);
+
+      @media screen and (max-width: 480px) {
+        left: .1em;
+      }
+    }
+  }
+}
+
+#reviews {
+  @media screen and (min-width: 700px) {
+    .content-wrapper {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 24fr 77fr 24fr;
+      grid-template-rows: $grid-row minmax(557px, auto) $grid-row;
+      grid-template-areas:
+        ". . ."
+        ". review ."
+        ". . .";
+      justify-content: center;
+      align-content: center;
+    }
+
+    .review {
+      grid-area: review;
+      padding: $grid-col-lg;
+      padding-left: $grid-col-lg / 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+    }
+
+    h2 {
+      padding-top: 0;
+    }
+
+    .blockquote-wrap {
+      display: grid;
+      grid-template-columns: ($grid-col-lg / 2) auto;
+      grid-template-rows: 4em auto;
+      grid-template-areas:
+        "openquote text"
+        ". text";
+      justify-content: center;
+      align-content: center;
+    }
+    
+    .openquote {
+      display: block;
+      grid-area: openquote;
+      align-self: center;
+      justify-self: center;
+    }
+
+    blockquote {
+      padding: 0;
+      font-size: 1.5em;
+      grid-area: text;
+      
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+// Footer Section
+
+#footer {
+  .bg-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: $gray-darkest;
+    width: 100%;
+  }
+  
+  li {
+    display: inline-block;
+  }
+
+  a {
+    &:hover {
+      color: $gold
+    }
+  }
+}
+
+
+#footer {
+  @media screen and (min-width: 700px) {
+    .content-wrapper {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 4fr 37fr 10fr 23fr 17fr 23fr 11fr;
+      grid-template-rows: $grid-row-sm minmax(218px, auto) $grid-row-sm;
+      grid-template-areas:
+        ". . . . . . ."
+        ". about . hours . location ."
+        ". . . . . . .";
+      justify-content: center;
+      align-content: center;
+    }
+    
+    .about {
+      grid-area: about;
+    }
+    
+    .hours {
+      grid-area: hours;
+      
+      p {
+        padding-bottom: 2em;
+      }
+    }
+    
+    .location {
+      grid-area: location;
+      
+      p {
+        padding-bottom: 3em;
+      }
+    }
+  }
+}
