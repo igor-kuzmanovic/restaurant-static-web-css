@@ -531,7 +531,7 @@
   #footer .location {
     grid-area: location; }
     #footer .location p {
-      padding-bottom: 3em; } }
+      padding-bottom: 3.5em; } }
 
 * {
   box-sizing: border-box; }
