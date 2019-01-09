@@ -16,18 +16,14 @@
   #header ul {
     font-size: 1.3125em; }
   #header li a {
-    padding: 45px 20px 44px 20px; }
+    padding: 39px 20px 45px 20px;
+    border-top: 6px solid rgba(0, 0, 0, 0); }
     #header li a.nav-link {
       font-family: "Gentium Book Basic", serif; }
       #header li a.nav-link.active:before {
-        background: rgba(124, 124, 124, 0.6);
-        content: "";
-        display: block;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 4px; }
+        border-top: 6x solid rgba(124, 124, 124, 0.6); }
+      #header li a.nav-link:hover {
+        border-top: 6x solid rgba(124, 124, 124, 0.6); }
     #header li a.social-link {
       color: #dab33e; }
 
@@ -388,4 +384,4 @@ label {
 
 @media screen and (max-width: 480px) {
   .bg-image {
-    background-attachment: scroll; } }
+    background-attachment: scroll !important; } }

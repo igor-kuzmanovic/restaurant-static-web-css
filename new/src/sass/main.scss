@@ -136,6 +136,6 @@ label {
 
 .bg-image {
   @media screen and (max-width: 480px) {
-    background-attachment: scroll;
+    background-attachment: scroll !important;
   }
 }

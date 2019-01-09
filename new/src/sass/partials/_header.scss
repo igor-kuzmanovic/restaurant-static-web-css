@@ -44,23 +44,21 @@
 
   li {
     a {
-      padding: 45px 20px 44px 20px;
+      padding: 39px 20px 45px 20px;
+	  border-top: 6px solid rgba(0,0,0,0);
 
       &.nav-link {
         font-family: $gentium-book-basic;
 
         &.active {
           &:before {
-            background: rgba($gray, .6);
-            content: "";
-            display: block;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 4px;
+            border-top: 6x solid rgba($gray, .6);
           }
         }
+		
+		&:hover {
+			border-top: 6x solid rgba($gray, .6);
+		}
       }
 
       &.social-link {
